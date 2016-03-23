@@ -14,18 +14,7 @@ layout: default
 
   {% include post-tags.html %}
 
-  {% assign n_posts = 0 %}
-  {% for post in site.posts %}
-      {%if post.id == page.id %}{% continue %}{% endif %}
-      {% for this_tag in page.tags %}
-          {% if post.tags contains this_tag%}
-              {% if n_posts == 0 %}{{include.heading}}<ul>{% endif %}
-              <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
-              {% assign n_posts = n_posts | plus: 1 %}
-              {% break %}
-          {% endif %}
-      {% endfor %}
-      {%if n_posts > 5 %}{% break %}{% endif %}
-  {% endfor %}
-  {% if n_posts > 0 %}</ul>{% endif %}
+  {% include related-posts.html %}
+
+  {% include comments.html %}
 </article>
