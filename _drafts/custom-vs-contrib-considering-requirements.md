@@ -1,4 +1,4 @@
 ---
-title: Custom vs. contrib: Considering requirements
+title: Custom vs. contrib, considering requirements
 tags: [drupal]
 ---
