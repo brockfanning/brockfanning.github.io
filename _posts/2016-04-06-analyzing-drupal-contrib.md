@@ -40,7 +40,7 @@ So those are the red flags to look for. Now how about some strategies for rootin
 
 2. Look at the number of sites that are using the module.
 
-    At the bottom of the project page you can see a general idea of how many live sites are using the module. This is a helpful thing to know that can save you time in your analysis. For example if a module is being used by 50,000 sites, you can at least be sure it's not broken, and it's probably not a performance killer either. Don't give up on a module just becaues less than 10 sites are using, but do keep that in mind.
+    At the bottom of the project page you can see a general idea of how many live sites are using the module. This is a helpful thing to know that can save you time in your analysis. For example if a module is being used by 50,000 sites, you can at least be sure it's not broken, and it's probably not a performance killer either. Don't give up on a module just because less than 10 sites are using, but do keep that in mind.
 
 3. Look at the date of the last commit
 
