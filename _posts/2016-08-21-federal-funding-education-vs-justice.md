@@ -24,7 +24,7 @@ In an effort to get my feet wet with [d3](https://d3js.org), [R](https://www.r-p
 
 In future posts I will delve into interactive visualizations and also try and narrow the data down.
 
-For anyone interested in the R code that is converting the Excel spreadsheet into usable json for d3, that code is [here](/r/federal-outlays-by-function-and-subfunction.r).
+For anyone interested in the R code that is converting the Excel spreadsheet into usable json for d3, that code is [here](https://github.com/brockfanning/brockfanning.github.io/blob/master/r/federal-outlays-by-function-and-subfunction.r).
 
 <div id="datavis"></div>
 <script>
