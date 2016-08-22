@@ -17,14 +17,14 @@ tags: [datavis]
 }
 </style>
 
-In an effort to get my feet wet with [https://d3js.org](d3), [https://www.r-project.org](R), and data science in general, here is a basic data visualization. The idea here is to compare federal budgets over time, for prisons vs. schools. It's actually more general than that. The source of the data is table 3.2 from this [OMB](https://www.whitehouse.gov/omb/budget/Historicals) page. The lines below are:
+In an effort to get my feet wet with [d3](https://d3js.org), [R](https://www.r-project.org), and data science in general, here is a basic data visualization. The idea here is to compare federal budgets over time, for prisons vs. schools. It's actually more general than that. The source of the data is table 3.2 from this [OMB](https://www.whitehouse.gov/omb/budget/Historicals) page. The lines below are:
 
 * <span class="education">Education, Training, Employment, and Social Services</span>
 * <span class="justice">Administration of Justice</span>
 
 In future posts I will delve into interactive visualizations and also try and narrow the data down.
 
-For anyone interested in the R code that is converting the Excel spreadsheet into usable json for d3, that code is [/r/federal-outlays-by-function-and-subfunction.r](here).
+For anyone interested in the R code that is converting the Excel spreadsheet into usable json for d3, that code is [here](/r/federal-outlays-by-function-and-subfunction.r).
 
 <div id="datavis"></div>
 <script>
