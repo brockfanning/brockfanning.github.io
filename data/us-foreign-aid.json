@@ -1,0 +1,2692 @@
+{
+  "2013 actual": [
+    {
+      "country": "Angola",
+      "total": 53676,
+      "code": "AGO"
+    },
+    {
+      "country": "Benin",
+      "total": 23707,
+      "code": "BEN"
+    },
+    {
+      "country": "Botswana",
+      "total": 55002,
+      "code": "BWA"
+    },
+    {
+      "country": "Burkina Faso",
+      "total": 16016,
+      "code": "BFA"
+    },
+    {
+      "country": "Burundi",
+      "total": 53260,
+      "code": "BDI"
+    },
+    {
+      "country": "Cabo Verde",
+      "total": 92,
+      "code": "CPV"
+    },
+    {
+      "country": "Cameroon",
+      "total": 25562,
+      "code": "CMR"
+    },
+    {
+      "country": "Central African Republic",
+      "total": 32232,
+      "code": "CAF"
+    },
+    {
+      "country": "Chad",
+      "total": 58026,
+      "code": "TCD"
+    },
+    {
+      "country": "Comoros",
+      "total": 122,
+      "code": "COM"
+    },
+    {
+      "country": "Cote d'Ivoire",
+      "total": 156781,
+      "code": "CIV"
+    },
+    {
+      "country": "Democratic Republic of the Congo",
+      "total": 322925,
+      "code": "COD"
+    },
+    {
+      "country": "Djibouti",
+      "total": 8753,
+      "code": "DJI"
+    },
+    {
+      "country": "Ethiopia",
+      "total": 619606,
+      "code": "ETH"
+    },
+    {
+      "country": "Gabon",
+      "total": 341,
+      "code": "GAB"
+    },
+    {
+      "country": "Ghana",
+      "total": 154629,
+      "code": "GHA"
+    },
+    {
+      "country": "Guinea",
+      "total": 20352,
+      "code": "GIN"
+    },
+    {
+      "country": "Kenya",
+      "total": 557498,
+      "code": "KEN"
+    },
+    {
+      "country": "Lesotho",
+      "total": 33165,
+      "code": "LSO"
+    },
+    {
+      "country": "Liberia",
+      "total": 190055,
+      "code": "LBR"
+    },
+    {
+      "country": "Madagascar",
+      "total": 58039,
+      "code": "MDG"
+    },
+    {
+      "country": "Malawi",
+      "total": 203482,
+      "code": "MWI"
+    },
+    {
+      "country": "Mali",
+      "total": 132056,
+      "code": "MLI"
+    },
+    {
+      "country": "Mauritania",
+      "total": 8757,
+      "code": "MRT"
+    },
+    {
+      "country": "Mauritius",
+      "total": 94,
+      "code": "MUS"
+    },
+    {
+      "country": "Mozambique",
+      "total": 381753,
+      "code": "MOZ"
+    },
+    {
+      "country": "Namibia",
+      "total": 32239,
+      "code": "NAM"
+    },
+    {
+      "country": "Niger",
+      "total": 32100,
+      "code": "NER"
+    },
+    {
+      "country": "Nigeria",
+      "total": 699778,
+      "code": "NGA"
+    },
+    {
+      "country": "Republic of the Congo",
+      "total": 38,
+      "code": "COG"
+    },
+    {
+      "country": "Rwanda",
+      "total": 203583,
+      "code": "RWA"
+    },
+    {
+      "country": "Sao Tome and Principe",
+      "total": 253,
+      "code": "STP"
+    },
+    {
+      "country": "Senegal",
+      "total": 105061,
+      "code": "SEN"
+    },
+    {
+      "country": "Seychelles",
+      "total": 132,
+      "code": "SYC"
+    },
+    {
+      "country": "Sierra Leone",
+      "total": 13297,
+      "code": "SLE"
+    },
+    {
+      "country": "Somalia",
+      "total": 319576,
+      "code": "SOM"
+    },
+    {
+      "country": "South Africa",
+      "total": 513552,
+      "code": "ZAF"
+    },
+    {
+      "country": "South Sudan",
+      "total": 556862,
+      "code": "SSD"
+    },
+    {
+      "country": "Sudan",
+      "total": 153178,
+      "code": "SDN"
+    },
+    {
+      "country": "Swaziland",
+      "total": 26144,
+      "code": "SWZ"
+    },
+    {
+      "country": "Tanzania",
+      "total": 565858,
+      "code": "TZA"
+    },
+    {
+      "country": "The Gambia",
+      "total": 82,
+      "code": "GMB"
+    },
+    {
+      "country": "Togo",
+      "total": 155,
+      "code": "TGO"
+    },
+    {
+      "country": "Uganda",
+      "total": 487249,
+      "code": "UGA"
+    },
+    {
+      "country": "Zambia",
+      "total": 395373,
+      "code": "ZMB"
+    },
+    {
+      "country": "Zimbabwe",
+      "total": 161909,
+      "code": "ZWE"
+    },
+    {
+      "country": "State Africa Regional (AF)",
+      "total": 90693,
+      "code": "ZAF"
+    },
+    {
+      "country": "USAID Central Africa Regional",
+      "total": 30679,
+      "code": "CAF"
+    },
+    {
+      "country": "USAID Southern Africa Regional",
+      "total": 26118,
+      "code": "ZAF"
+    },
+    {
+      "country": "Burma",
+      "total": 61885,
+      "code": "MMR"
+    },
+    {
+      "country": "Cambodia",
+      "total": 77355,
+      "code": "KHM"
+    },
+    {
+      "country": "China",
+      "total": 13924,
+      "code": "CHN"
+    },
+    {
+      "country": "Indonesia",
+      "total": 166955,
+      "code": "IDN"
+    },
+    {
+      "country": "Laos",
+      "total": 11290,
+      "code": "LAO"
+    },
+    {
+      "country": "Malaysia",
+      "total": 3227,
+      "code": "MYS"
+    },
+    {
+      "country": "Marshall Islands",
+      "total": 483,
+      "code": "MHL"
+    },
+    {
+      "country": "Micronesia",
+      "total": 470,
+      "code": "FSM"
+    },
+    {
+      "country": "Mongolia",
+      "total": 9212,
+      "code": "MNG"
+    },
+    {
+      "country": "Papua New Guinea",
+      "total": 4853,
+      "code": "PNG"
+    },
+    {
+      "country": "Philippines",
+      "total": 175571,
+      "code": "PHL"
+    },
+    {
+      "country": "Samoa",
+      "total": 37,
+      "code": "WSM"
+    },
+    {
+      "country": "Singapore",
+      "total": 250,
+      "code": "SGP"
+    },
+    {
+      "country": "Thailand",
+      "total": 10461,
+      "code": "THA"
+    },
+    {
+      "country": "Timor-Leste",
+      "total": 13324,
+      "code": "TLS"
+    },
+    {
+      "country": "Vietnam",
+      "total": 113281,
+      "code": "VNM"
+    },
+    {
+      "country": "Albania",
+      "total": 21578,
+      "code": "ALB"
+    },
+    {
+      "country": "Armenia",
+      "total": 37129,
+      "code": "ARM"
+    },
+    {
+      "country": "Azerbaijan",
+      "total": 16206,
+      "code": "AZE"
+    },
+    {
+      "country": "Belarus",
+      "total": 11001,
+      "code": "BLR"
+    },
+    {
+      "country": "Bosnia and Herzegovina",
+      "total": 46690,
+      "code": "BIH"
+    },
+    {
+      "country": "Bulgaria",
+      "total": 9652,
+      "code": "BGR"
+    },
+    {
+      "country": "Croatia",
+      "total": 4797,
+      "code": "HRV"
+    },
+    {
+      "country": "Cyprus",
+      "total": 2925,
+      "code": "CYP"
+    },
+    {
+      "country": "Czech Republic",
+      "total": 6499,
+      "code": "CZE"
+    },
+    {
+      "country": "Estonia",
+      "total": 3413,
+      "code": "EST"
+    },
+    {
+      "country": "Georgia",
+      "total": 69968,
+      "code": "GEO"
+    },
+    {
+      "country": "Greece",
+      "total": 93,
+      "code": "GRC"
+    },
+    {
+      "country": "Hungary",
+      "total": 1898,
+      "code": "HUN"
+    },
+    {
+      "country": "Latvia",
+      "total": 3285,
+      "code": "LVA"
+    },
+    {
+      "country": "Lithuania",
+      "total": 3560,
+      "code": "LTU"
+    },
+    {
+      "country": "Macedonia",
+      "total": 16970,
+      "code": "MKD"
+    },
+    {
+      "country": "Malta",
+      "total": 152,
+      "code": "MLT"
+    },
+    {
+      "country": "Moldova",
+      "total": 21855,
+      "code": "MDA"
+    },
+    {
+      "country": "Montenegro",
+      "total": 4862,
+      "code": "MNE"
+    },
+    {
+      "country": "Poland",
+      "total": 26777,
+      "code": "POL"
+    },
+    {
+      "country": "Portugal",
+      "total": 93,
+      "code": "PRT"
+    },
+    {
+      "country": "Romania",
+      "total": 13005,
+      "code": "ROU"
+    },
+    {
+      "country": "Serbia",
+      "total": 31022,
+      "code": "SRB"
+    },
+    {
+      "country": "Slovakia",
+      "total": 1895,
+      "code": "SVK"
+    },
+    {
+      "country": "Slovenia",
+      "total": 1039,
+      "code": "SVN"
+    },
+    {
+      "country": "Turkey",
+      "total": 4265,
+      "code": "TUR"
+    },
+    {
+      "country": "Ukraine",
+      "total": 92391,
+      "code": "UKR"
+    },
+    {
+      "country": "International Fund for Ireland",
+      "total": 2090,
+      "code": "IRL"
+    },
+    {
+      "country": "Algeria",
+      "total": 9107,
+      "code": "DZA"
+    },
+    {
+      "country": "Bahrain",
+      "total": 13489,
+      "code": "BHR"
+    },
+    {
+      "country": "Egypt",
+      "total": 1484215,
+      "code": "EGY"
+    },
+    {
+      "country": "Iraq",
+      "total": 589379,
+      "code": "IRQ"
+    },
+    {
+      "country": "Israel",
+      "total": 2943234,
+      "code": "ISR"
+    },
+    {
+      "country": "Jordan",
+      "total": 861357,
+      "code": "JOR"
+    },
+    {
+      "country": "Lebanon",
+      "total": 176014,
+      "code": "LBN"
+    },
+    {
+      "country": "Libya",
+      "total": 22528,
+      "code": "LBY"
+    },
+    {
+      "country": "Morocco",
+      "total": 31105,
+      "code": "MAR"
+    },
+    {
+      "country": "Oman",
+      "total": 11005,
+      "code": "OMN"
+    },
+    {
+      "country": "Saudi Arabia",
+      "total": 9,
+      "code": "SAU"
+    },
+    {
+      "country": "Syria",
+      "total": 77738,
+      "code": "SYR"
+    },
+    {
+      "country": "Tunisia",
+      "total": 47199,
+      "code": "TUN"
+    },
+    {
+      "country": "West Bank and Gaza",
+      "total": 437227,
+      "code": "PSE"
+    },
+    {
+      "country": "Yemen",
+      "total": 114764,
+      "code": "YEM"
+    },
+    {
+      "country": "Trans-Sahara Counter-Terrorism Partnership \r(TSCTP)",
+      "total": 7176,
+      "code": "ESH"
+    },
+    {
+      "country": "Afghanistan",
+      "total": 2292159,
+      "code": "AFG"
+    },
+    {
+      "country": "Bangladesh",
+      "total": 202402,
+      "code": "BGD"
+    },
+    {
+      "country": "India",
+      "total": 79718,
+      "code": "IND"
+    },
+    {
+      "country": "Kazakhstan",
+      "total": 14033,
+      "code": "KAZ"
+    },
+    {
+      "country": "Kyrgyz Republic",
+      "total": 49137,
+      "code": "KGZ"
+    },
+    {
+      "country": "Maldives",
+      "total": 3889,
+      "code": "MDV"
+    },
+    {
+      "country": "Nepal",
+      "total": 90048,
+      "code": "NPL"
+    },
+    {
+      "country": "Pakistan",
+      "total": 1146363,
+      "code": "PAK"
+    },
+    {
+      "country": "Sri Lanka",
+      "total": 12714,
+      "code": "LKA"
+    },
+    {
+      "country": "Tajikistan",
+      "total": 40621,
+      "code": "TJK"
+    },
+    {
+      "country": "Turkmenistan",
+      "total": 5968,
+      "code": "TKM"
+    },
+    {
+      "country": "Uzbekistan",
+      "total": 11917,
+      "code": "UZB"
+    },
+    {
+      "country": "Argentina",
+      "total": 765,
+      "code": "ARG"
+    },
+    {
+      "country": "Belize",
+      "total": 1012,
+      "code": "BLZ"
+    },
+    {
+      "country": "Bolivia",
+      "total": 5171,
+      "code": "BOL"
+    },
+    {
+      "country": "Brazil",
+      "total": 15185,
+      "code": "BRA"
+    },
+    {
+      "country": "Chile",
+      "total": 1038,
+      "code": "CHL"
+    },
+    {
+      "country": "Colombia",
+      "total": 359754,
+      "code": "COL"
+    },
+    {
+      "country": "Costa Rica",
+      "total": 1624,
+      "code": "CRI"
+    },
+    {
+      "country": "Cuba",
+      "total": 19283,
+      "code": "CUB"
+    },
+    {
+      "country": "Dominican Republic",
+      "total": 26407,
+      "code": "DOM"
+    },
+    {
+      "country": "Ecuador",
+      "total": 18846,
+      "code": "ECU"
+    },
+    {
+      "country": "El Salvador",
+      "total": 27566,
+      "code": "SLV"
+    },
+    {
+      "country": "Guatemala",
+      "total": 80779,
+      "code": "GTM"
+    },
+    {
+      "country": "Guyana",
+      "total": 9150,
+      "code": "GUY"
+    },
+    {
+      "country": "Haiti",
+      "total": 332540,
+      "code": "HTI"
+    },
+    {
+      "country": "Honduras",
+      "total": 51980,
+      "code": "HND"
+    },
+    {
+      "country": "Jamaica",
+      "total": 7061,
+      "code": "JAM"
+    },
+    {
+      "country": "Mexico",
+      "total": 265064,
+      "code": "MEX"
+    },
+    {
+      "country": "Nicaragua",
+      "total": 8599,
+      "code": "NIC"
+    },
+    {
+      "country": "Panama",
+      "total": 3449,
+      "code": "PAN"
+    },
+    {
+      "country": "Paraguay",
+      "total": 6041,
+      "code": "PRY"
+    },
+    {
+      "country": "Peru",
+      "total": 98634,
+      "code": "PER"
+    },
+    {
+      "country": "Suriname",
+      "total": 213,
+      "code": "SUR"
+    },
+    {
+      "country": "The Bahamas",
+      "total": 164,
+      "code": "BHS"
+    },
+    {
+      "country": "Trinidad and Tobago",
+      "total": 167,
+      "code": "TTO"
+    },
+    {
+      "country": "Uruguay",
+      "total": 427,
+      "code": "URY"
+    },
+    {
+      "country": "Venezuela",
+      "total": 5786,
+      "code": "VEN"
+    },
+    {
+      "country": "Barbados and Eastern Caribbean",
+      "total": 32248,
+      "code": "BRB"
+    }
+  ],
+  "2014 actual": [
+    {
+      "country": "Togo",
+      "total": 398,
+      "code": "TGO"
+    },
+    {
+      "country": "Uganda",
+      "total": 491884,
+      "code": "UGA"
+    },
+    {
+      "country": "Zambia",
+      "total": 359127,
+      "code": "ZMB"
+    },
+    {
+      "country": "Zimbabwe",
+      "total": 168976,
+      "code": "ZWE"
+    },
+    {
+      "country": "State Africa Regional",
+      "total": 97022,
+      "code": "ZAF"
+    },
+    {
+      "country": "USAID Central Africa Regional",
+      "total": 39400,
+      "code": "CAF"
+    },
+    {
+      "country": "USAID Southern Africa Regional",
+      "total": 25511,
+      "code": "ZAF"
+    },
+    {
+      "country": "Burma",
+      "total": 99700,
+      "code": "MMR"
+    },
+    {
+      "country": "Cambodia",
+      "total": 70892,
+      "code": "KHM"
+    },
+    {
+      "country": "China",
+      "total": 12300,
+      "code": "CHN"
+    },
+    {
+      "country": "Indonesia",
+      "total": 139491,
+      "code": "IDN"
+    },
+    {
+      "country": "Laos",
+      "total": 16336,
+      "code": "LAO"
+    },
+    {
+      "country": "Malaysia",
+      "total": 2947,
+      "code": "MYS"
+    },
+    {
+      "country": "Marshall Islands",
+      "total": 500,
+      "code": "MHL"
+    },
+    {
+      "country": "Micronesia",
+      "total": 500,
+      "code": "FSM"
+    },
+    {
+      "country": "Mongolia",
+      "total": 8465,
+      "code": "MNG"
+    },
+    {
+      "country": "Papua New Guinea",
+      "total": 6445,
+      "code": "PNG"
+    },
+    {
+      "country": "Philippines",
+      "total": 196643,
+      "code": "PHL"
+    },
+    {
+      "country": "Samoa",
+      "total": 30,
+      "code": "WSM"
+    },
+    {
+      "country": "Singapore",
+      "total": 240,
+      "code": "SGP"
+    },
+    {
+      "country": "Thailand",
+      "total": 7499,
+      "code": "THA"
+    },
+    {
+      "country": "Timor-Leste",
+      "total": 9843,
+      "code": "TLS"
+    },
+    {
+      "country": "Tonga",
+      "total": 250,
+      "code": "TON"
+    },
+    {
+      "country": "Vietnam",
+      "total": 105641,
+      "code": "VNM"
+    },
+    {
+      "country": "Albania",
+      "total": 16562,
+      "code": "ALB"
+    },
+    {
+      "country": "Armenia",
+      "total": 27550,
+      "code": "ARM"
+    },
+    {
+      "country": "Azerbaijan",
+      "total": 14273,
+      "code": "AZE"
+    },
+    {
+      "country": "Belarus",
+      "total": 11000,
+      "code": "BLR"
+    },
+    {
+      "country": "Bosnia and Herzegovina",
+      "total": 41991,
+      "code": "BIH"
+    },
+    {
+      "country": "Bulgaria",
+      "total": 9313,
+      "code": "BGR"
+    },
+    {
+      "country": "Croatia",
+      "total": 4535,
+      "code": "HRV"
+    },
+    {
+      "country": "Czech Republic",
+      "total": 4800,
+      "code": "CZE"
+    },
+    {
+      "country": "Estonia",
+      "total": 3611,
+      "code": "EST"
+    },
+    {
+      "country": "Georgia",
+      "total": 58388,
+      "code": "GEO"
+    },
+    {
+      "country": "Greece",
+      "total": 97,
+      "code": "GRC"
+    },
+    {
+      "country": "Hungary",
+      "total": 1602,
+      "code": "HUN"
+    },
+    {
+      "country": "Latvia",
+      "total": 3517,
+      "code": "LVA"
+    },
+    {
+      "country": "Lithuania",
+      "total": 3774,
+      "code": "LTU"
+    },
+    {
+      "country": "Macedonia",
+      "total": 12153,
+      "code": "MKD"
+    },
+    {
+      "country": "Malta",
+      "total": 147,
+      "code": "MLT"
+    },
+    {
+      "country": "Moldova",
+      "total": 20689,
+      "code": "MDA"
+    },
+    {
+      "country": "Montenegro",
+      "total": 4486,
+      "code": "MNE"
+    },
+    {
+      "country": "Poland",
+      "total": 16000,
+      "code": "POL"
+    },
+    {
+      "country": "Portugal",
+      "total": 81,
+      "code": "PRT"
+    },
+    {
+      "country": "Romania",
+      "total": 9737,
+      "code": "ROU"
+    },
+    {
+      "country": "Serbia",
+      "total": 22965,
+      "code": "SRB"
+    },
+    {
+      "country": "Slovakia",
+      "total": 1347,
+      "code": "SVK"
+    },
+    {
+      "country": "Slovenia",
+      "total": 1167,
+      "code": "SVN"
+    },
+    {
+      "country": "Turkey",
+      "total": 4094,
+      "code": "TUR"
+    },
+    {
+      "country": "Ukraine",
+      "total": 88057,
+      "code": "UKR"
+    },
+    {
+      "country": "International Fund for Ireland",
+      "total": 1250,
+      "code": "IRL"
+    },
+    {
+      "country": "Algeria",
+      "total": 7151,
+      "code": "DZA"
+    },
+    {
+      "country": "Bahrain",
+      "total": 10972,
+      "code": "BHR"
+    },
+    {
+      "country": "Egypt",
+      "total": 1505920,
+      "code": "EGY"
+    },
+    {
+      "country": "Iraq",
+      "total": 367633,
+      "code": "IRQ"
+    },
+    {
+      "country": "Israel",
+      "total": 3100000,
+      "code": "ISR"
+    },
+    {
+      "country": "Jordan",
+      "total": 1010288,
+      "code": "JOR"
+    },
+    {
+      "country": "Lebanon",
+      "total": 166000,
+      "code": "LBN"
+    },
+    {
+      "country": "Libya",
+      "total": 5901,
+      "code": "LBY"
+    },
+    {
+      "country": "Morocco",
+      "total": 34183,
+      "code": "MAR"
+    },
+    {
+      "country": "Oman",
+      "total": 11511,
+      "code": "OMN"
+    },
+    {
+      "country": "Saudi Arabia",
+      "total": 9,
+      "code": "SAU"
+    },
+    {
+      "country": "Syria",
+      "total": 8250,
+      "code": "SYR"
+    },
+    {
+      "country": "Tunisia",
+      "total": 57779,
+      "code": "TUN"
+    },
+    {
+      "country": "West Bank and Gaza",
+      "total": 449738,
+      "code": "PSE"
+    },
+    {
+      "country": "Yemen",
+      "total": 102790,
+      "code": "YEM"
+    },
+    {
+      "country": "Trans-Sahara Counter-Terrorism Partnership \r(TSCTP)",
+      "total": 2500,
+      "code": "ESH"
+    },
+    {
+      "country": "Afghanistan",
+      "total": 1186628,
+      "code": "AFG"
+    },
+    {
+      "country": "Bangladesh",
+      "total": 205051,
+      "code": "BGD"
+    },
+    {
+      "country": "India",
+      "total": 87165,
+      "code": "IND"
+    },
+    {
+      "country": "Kazakhstan",
+      "total": 9664,
+      "code": "KAZ"
+    },
+    {
+      "country": "Kyrgyz Republic",
+      "total": 45356,
+      "code": "KGZ"
+    },
+    {
+      "country": "Maldives",
+      "total": 4461,
+      "code": "MDV"
+    },
+    {
+      "country": "Nepal",
+      "total": 81732,
+      "code": "NPL"
+    },
+    {
+      "country": "Pakistan",
+      "total": 890404,
+      "code": "PAK"
+    },
+    {
+      "country": "Sri Lanka",
+      "total": 6556,
+      "code": "LKA"
+    },
+    {
+      "country": "Tajikistan",
+      "total": 37994,
+      "code": "TJK"
+    },
+    {
+      "country": "Turkmenistan",
+      "total": 5044,
+      "code": "TKM"
+    },
+    {
+      "country": "Uzbekistan",
+      "total": 12923,
+      "code": "UZB"
+    },
+    {
+      "country": "Argentina",
+      "total": 589,
+      "code": "ARG"
+    },
+    {
+      "country": "Belize",
+      "total": 1234,
+      "code": "BLZ"
+    },
+    {
+      "country": "Brazil",
+      "total": 13858,
+      "code": "BRA"
+    },
+    {
+      "country": "Chile",
+      "total": 1082,
+      "code": "CHL"
+    },
+    {
+      "country": "Colombia",
+      "total": 330601,
+      "code": "COL"
+    },
+    {
+      "country": "Costa Rica",
+      "total": 1731,
+      "code": "CRI"
+    },
+    {
+      "country": "Cuba",
+      "total": 20000,
+      "code": "CUB"
+    },
+    {
+      "country": "Dominican Republic",
+      "total": 23248,
+      "code": "DOM"
+    },
+    {
+      "country": "Ecuador",
+      "total": 2000,
+      "code": "ECU"
+    },
+    {
+      "country": "El Salvador",
+      "total": 21631,
+      "code": "SLV"
+    },
+    {
+      "country": "Guatemala",
+      "total": 65278,
+      "code": "GTM"
+    },
+    {
+      "country": "Guyana",
+      "total": 6904,
+      "code": "GUY"
+    },
+    {
+      "country": "Haiti",
+      "total": 300796,
+      "code": "HTI"
+    },
+    {
+      "country": "Honduras",
+      "total": 41847,
+      "code": "HND"
+    },
+    {
+      "country": "Jamaica",
+      "total": 6670,
+      "code": "JAM"
+    },
+    {
+      "country": "Mexico",
+      "total": 206768,
+      "code": "MEX"
+    },
+    {
+      "country": "Nicaragua",
+      "total": 8400,
+      "code": "NIC"
+    },
+    {
+      "country": "Panama",
+      "total": 2986,
+      "code": "PAN"
+    },
+    {
+      "country": "Paraguay",
+      "total": 7528,
+      "code": "PRY"
+    },
+    {
+      "country": "Peru",
+      "total": 82649,
+      "code": "PER"
+    },
+    {
+      "country": "Suriname",
+      "total": 212,
+      "code": "SUR"
+    },
+    {
+      "country": "The Bahamas",
+      "total": 172,
+      "code": "BHS"
+    },
+    {
+      "country": "Trinidad and Tobago",
+      "total": 179,
+      "code": "TTO"
+    },
+    {
+      "country": "Uruguay",
+      "total": 725,
+      "code": "URY"
+    },
+    {
+      "country": "Venezuela",
+      "total": 4298,
+      "code": "VEN"
+    },
+    {
+      "country": "Barbados and Eastern Caribbean",
+      "total": 16734,
+      "code": "BRB"
+    }
+  ],
+  "2015 actual": [
+    {
+      "country": "Angola",
+      "total": 54847,
+      "code": "AGO"
+    },
+    {
+      "country": "Benin",
+      "total": 23310,
+      "code": "BEN"
+    },
+    {
+      "country": "Botswana",
+      "total": 37291,
+      "code": "BWA"
+    },
+    {
+      "country": "Burkina Faso",
+      "total": 23368,
+      "code": "BFA"
+    },
+    {
+      "country": "Burundi",
+      "total": 57631,
+      "code": "BDI"
+    },
+    {
+      "country": "Cabo Verde",
+      "total": 144,
+      "code": "CPV"
+    },
+    {
+      "country": "Cameroon",
+      "total": 49065,
+      "code": "CMR"
+    },
+    {
+      "country": "Central African Republic",
+      "total": 41264,
+      "code": "CAF"
+    },
+    {
+      "country": "Chad",
+      "total": 61970,
+      "code": "TCD"
+    },
+    {
+      "country": "Comoros",
+      "total": 232,
+      "code": "COM"
+    },
+    {
+      "country": "Cote d'Ivoire",
+      "total": 138809,
+      "code": "CIV"
+    },
+    {
+      "country": "Democratic Republic of the Congo",
+      "total": 320434,
+      "code": "COD"
+    },
+    {
+      "country": "Djibouti",
+      "total": 16053,
+      "code": "DJI"
+    },
+    {
+      "country": "Ethiopia",
+      "total": 650926,
+      "code": "ETH"
+    },
+    {
+      "country": "Gabon",
+      "total": 351,
+      "code": "GAB"
+    },
+    {
+      "country": "Ghana",
+      "total": 137646,
+      "code": "GHA"
+    },
+    {
+      "country": "Guinea",
+      "total": 24039,
+      "code": "GIN"
+    },
+    {
+      "country": "Guinea-Bissau",
+      "total": 130,
+      "code": "GNB"
+    },
+    {
+      "country": "Kenya",
+      "total": 741827,
+      "code": "KEN"
+    },
+    {
+      "country": "Lesotho",
+      "total": 38421,
+      "code": "LSO"
+    },
+    {
+      "country": "Liberia",
+      "total": 112086,
+      "code": "LBR"
+    },
+    {
+      "country": "Madagascar",
+      "total": 70151,
+      "code": "MDG"
+    },
+    {
+      "country": "Malawi",
+      "total": 222400,
+      "code": "MWI"
+    },
+    {
+      "country": "Mali",
+      "total": 147663,
+      "code": "MLI"
+    },
+    {
+      "country": "Mauritania",
+      "total": 8699,
+      "code": "MRT"
+    },
+    {
+      "country": "Mauritius",
+      "total": 244,
+      "code": "MUS"
+    },
+    {
+      "country": "Mozambique",
+      "total": 450168,
+      "code": "MOZ"
+    },
+    {
+      "country": "Namibia",
+      "total": 16834,
+      "code": "NAM"
+    },
+    {
+      "country": "Niger",
+      "total": 58853,
+      "code": "NER"
+    },
+    {
+      "country": "Nigeria",
+      "total": 642753,
+      "code": "NGA"
+    },
+    {
+      "country": "Republic of the Congo",
+      "total": 270,
+      "code": "COG"
+    },
+    {
+      "country": "Rwanda",
+      "total": 169164,
+      "code": "RWA"
+    },
+    {
+      "country": "Sao Tome and Principe",
+      "total": 74,
+      "code": "STP"
+    },
+    {
+      "country": "Senegal",
+      "total": 113934,
+      "code": "SEN"
+    },
+    {
+      "country": "Seychelles",
+      "total": 142,
+      "code": "SYC"
+    },
+    {
+      "country": "Sierra Leone",
+      "total": 11699,
+      "code": "SLE"
+    },
+    {
+      "country": "Somalia",
+      "total": 373554,
+      "code": "SOM"
+    },
+    {
+      "country": "South Africa",
+      "total": 323692,
+      "code": "ZAF"
+    },
+    {
+      "country": "South Sudan",
+      "total": 576134,
+      "code": "SSD"
+    },
+    {
+      "country": "Sudan",
+      "total": 130600,
+      "code": "SDN"
+    },
+    {
+      "country": "Swaziland",
+      "total": 46775,
+      "code": "SWZ"
+    },
+    {
+      "country": "Tanzania",
+      "total": 634147,
+      "code": "TZA"
+    },
+    {
+      "country": "The Gambia",
+      "total": 437,
+      "code": "GMB"
+    },
+    {
+      "country": "Togo",
+      "total": 473,
+      "code": "TGO"
+    },
+    {
+      "country": "Uganda",
+      "total": 505474,
+      "code": "UGA"
+    },
+    {
+      "country": "Zambia",
+      "total": 414073,
+      "code": "ZMB"
+    },
+    {
+      "country": "Zimbabwe",
+      "total": 171646,
+      "code": "ZWE"
+    },
+    {
+      "country": "State Africa Regional (AF)",
+      "total": 206617,
+      "code": "ZAF"
+    },
+    {
+      "country": "USAID Central Africa Regional",
+      "total": 57800,
+      "code": "CAF"
+    },
+    {
+      "country": "USAID Southern Africa Regional",
+      "total": 45350,
+      "code": "ZAF"
+    },
+    {
+      "country": "Burma",
+      "total": 96700,
+      "code": "MMR"
+    },
+    {
+      "country": "Cambodia",
+      "total": 76526,
+      "code": "KHM"
+    },
+    {
+      "country": "China",
+      "total": 12225,
+      "code": "CHN"
+    },
+    {
+      "country": "Fiji",
+      "total": 213,
+      "code": "FJI"
+    },
+    {
+      "country": "Indonesia",
+      "total": 136914,
+      "code": "IDN"
+    },
+    {
+      "country": "Laos",
+      "total": 18297,
+      "code": "LAO"
+    },
+    {
+      "country": "Malaysia",
+      "total": 2252,
+      "code": "MYS"
+    },
+    {
+      "country": "Marshall Islands",
+      "total": 500,
+      "code": "MHL"
+    },
+    {
+      "country": "Micronesia",
+      "total": 500,
+      "code": "FSM"
+    },
+    {
+      "country": "Mongolia",
+      "total": 7134,
+      "code": "MNG"
+    },
+    {
+      "country": "Papua New Guinea",
+      "total": 6498,
+      "code": "PNG"
+    },
+    {
+      "country": "Philippines",
+      "total": 176123,
+      "code": "PHL"
+    },
+    {
+      "country": "Samoa",
+      "total": 82,
+      "code": "WSM"
+    },
+    {
+      "country": "Singapore",
+      "total": 240,
+      "code": "SGP"
+    },
+    {
+      "country": "Thailand",
+      "total": 6220,
+      "code": "THA"
+    },
+    {
+      "country": "Timor-Leste",
+      "total": 11794,
+      "code": "TLS"
+    },
+    {
+      "country": "Tonga",
+      "total": 248,
+      "code": "TON"
+    },
+    {
+      "country": "Vietnam",
+      "total": 89090,
+      "code": "VNM"
+    },
+    {
+      "country": "Albania",
+      "total": 14183,
+      "code": "ALB"
+    },
+    {
+      "country": "Armenia",
+      "total": 16512,
+      "code": "ARM"
+    },
+    {
+      "country": "Azerbaijan",
+      "total": 10080,
+      "code": "AZE"
+    },
+    {
+      "country": "Belarus",
+      "total": 7000,
+      "code": "BLR"
+    },
+    {
+      "country": "Bosnia and Herzegovina",
+      "total": 32186,
+      "code": "BIH"
+    },
+    {
+      "country": "Bulgaria",
+      "total": 7250,
+      "code": "BGR"
+    },
+    {
+      "country": "Croatia",
+      "total": 4481,
+      "code": "HRV"
+    },
+    {
+      "country": "Czech Republic",
+      "total": 2748,
+      "code": "CZE"
+    },
+    {
+      "country": "Estonia",
+      "total": 2827,
+      "code": "EST"
+    },
+    {
+      "country": "Georgia",
+      "total": 75431,
+      "code": "GEO"
+    },
+    {
+      "country": "Greece",
+      "total": 199,
+      "code": "GRC"
+    },
+    {
+      "country": "Hungary",
+      "total": 993,
+      "code": "HUN"
+    },
+    {
+      "country": "Latvia",
+      "total": 2727,
+      "code": "LVA"
+    },
+    {
+      "country": "Lithuania",
+      "total": 2698,
+      "code": "LTU"
+    },
+    {
+      "country": "Macedonia",
+      "total": 10912,
+      "code": "MKD"
+    },
+    {
+      "country": "Malta",
+      "total": 100,
+      "code": "MLT"
+    },
+    {
+      "country": "Moldova",
+      "total": 30619,
+      "code": "MDA"
+    },
+    {
+      "country": "Montenegro",
+      "total": 3933,
+      "code": "MNE"
+    },
+    {
+      "country": "Poland",
+      "total": 13996,
+      "code": "POL"
+    },
+    {
+      "country": "Portugal",
+      "total": 90,
+      "code": "PRT"
+    },
+    {
+      "country": "Romania",
+      "total": 7096,
+      "code": "ROU"
+    }
+  ],
+  "2016 request": [
+    {
+      "country": "Zambia",
+      "total": 415890,
+      "code": "ZMB"
+    },
+    {
+      "country": "Zimbabwe",
+      "total": 161566,
+      "code": "ZWE"
+    },
+    {
+      "country": "State Africa Regional (AF)",
+      "total": 211798,
+      "code": "ZAF"
+    },
+    {
+      "country": "USAID Central Africa Regional",
+      "total": 16578,
+      "code": "CAF"
+    },
+    {
+      "country": "USAID Southern Africa Regional",
+      "total": 34223,
+      "code": "ZAF"
+    },
+    {
+      "country": "Burma",
+      "total": 110200,
+      "code": "MMR"
+    },
+    {
+      "country": "Cambodia",
+      "total": 80512,
+      "code": "KHM"
+    },
+    {
+      "country": "China",
+      "total": 6800,
+      "code": "CHN"
+    },
+    {
+      "country": "Indonesia",
+      "total": 187375,
+      "code": "IDN"
+    },
+    {
+      "country": "Laos",
+      "total": 21750,
+      "code": "LAO"
+    },
+    {
+      "country": "Malaysia",
+      "total": 3125,
+      "code": "MYS"
+    },
+    {
+      "country": "Marshall Islands",
+      "total": 500,
+      "code": "MHL"
+    },
+    {
+      "country": "Micronesia",
+      "total": 500,
+      "code": "FSM"
+    },
+    {
+      "country": "Mongolia",
+      "total": 3874,
+      "code": "MNG"
+    },
+    {
+      "country": "Papua New Guinea",
+      "total": 6450,
+      "code": "PNG"
+    },
+    {
+      "country": "Philippines",
+      "total": 184220,
+      "code": "PHL"
+    },
+    {
+      "country": "Samoa",
+      "total": 100,
+      "code": "WSM"
+    },
+    {
+      "country": "Singapore",
+      "total": 250,
+      "code": "SGP"
+    },
+    {
+      "country": "Thailand",
+      "total": 10420,
+      "code": "THA"
+    },
+    {
+      "country": "Timor-Leste",
+      "total": 16200,
+      "code": "TLS"
+    },
+    {
+      "country": "Tonga",
+      "total": 250,
+      "code": "TON"
+    },
+    {
+      "country": "Vietnam",
+      "total": 125812,
+      "code": "VNM"
+    },
+    {
+      "country": "Albania",
+      "total": 14120,
+      "code": "ALB"
+    },
+    {
+      "country": "Armenia",
+      "total": 23100,
+      "code": "ARM"
+    },
+    {
+      "country": "Azerbaijan",
+      "total": 11508,
+      "code": "AZE"
+    },
+    {
+      "country": "Belarus",
+      "total": 9000,
+      "code": "BLR"
+    },
+    {
+      "country": "Bosnia and Herzegovina",
+      "total": 37220,
+      "code": "BIH"
+    },
+    {
+      "country": "Bulgaria",
+      "total": 7000,
+      "code": "BGR"
+    },
+    {
+      "country": "Croatia",
+      "total": 3600,
+      "code": "HRV"
+    },
+    {
+      "country": "Czech Republic",
+      "total": 2800,
+      "code": "CZE"
+    },
+    {
+      "country": "Estonia",
+      "total": 3200,
+      "code": "EST"
+    },
+    {
+      "country": "Georgia",
+      "total": 77152,
+      "code": "GEO"
+    },
+    {
+      "country": "Greece",
+      "total": 200,
+      "code": "GRC"
+    },
+    {
+      "country": "Hungary",
+      "total": 1000,
+      "code": "HUN"
+    },
+    {
+      "country": "Latvia",
+      "total": 3200,
+      "code": "LVA"
+    },
+    {
+      "country": "Lithuania",
+      "total": 3200,
+      "code": "LTU"
+    },
+    {
+      "country": "Macedonia",
+      "total": 11800,
+      "code": "MKD"
+    },
+    {
+      "country": "Iraq",
+      "total": 17500,
+      "code": "IRQ"
+    },
+    {
+      "country": "Jordan",
+      "total": 340000,
+      "code": "JOR"
+    },
+    {
+      "country": "Morocco",
+      "total": 5000,
+      "code": "MAR"
+    },
+    {
+      "country": "Syria",
+      "total": 8250,
+      "code": "SYR"
+    },
+    {
+      "country": "West Bank and Gaza",
+      "total": 97958,
+      "code": "PSE"
+    },
+    {
+      "country": "Afghanistan",
+      "total": 743837,
+      "code": "AFG"
+    },
+    {
+      "country": "Pakistan",
+      "total": 416920,
+      "code": "PAK"
+    },
+    {
+      "country": "Iraq",
+      "total": 300000,
+      "code": "IRQ"
+    },
+    {
+      "country": "Pakistan",
+      "total": 42229,
+      "code": "PAK"
+    }
+  ],
+  "2017 request": [
+    {
+      "country": "Angola",
+      "total": 45824,
+      "code": "AGO"
+    },
+    {
+      "country": "Benin",
+      "total": 23300,
+      "code": "BEN"
+    },
+    {
+      "country": "Botswana",
+      "total": 41529,
+      "code": "BWA"
+    },
+    {
+      "country": "Burkina Faso",
+      "total": 19345,
+      "code": "BFA"
+    },
+    {
+      "country": "Burundi",
+      "total": 48371,
+      "code": "BDI"
+    },
+    {
+      "country": "Cabo Verde",
+      "total": 150,
+      "code": "CPV"
+    },
+    {
+      "country": "Cameroon",
+      "total": 45975,
+      "code": "CMR"
+    },
+    {
+      "country": "Central African Republic",
+      "total": 18069,
+      "code": "CAF"
+    },
+    {
+      "country": "Chad",
+      "total": 1500,
+      "code": "TCD"
+    },
+    {
+      "country": "Comoros",
+      "total": 150,
+      "code": "COM"
+    },
+    {
+      "country": "Cote d'Ivoire",
+      "total": 145745,
+      "code": "CIV"
+    },
+    {
+      "country": "Democratic Republic of the Congo",
+      "total": 313148,
+      "code": "COD"
+    },
+    {
+      "country": "Djibouti",
+      "total": 10500,
+      "code": "DJI"
+    },
+    {
+      "country": "Ethiopia",
+      "total": 513667,
+      "code": "ETH"
+    },
+    {
+      "country": "Gabon",
+      "total": 350,
+      "code": "GAB"
+    },
+    {
+      "country": "Ghana",
+      "total": 146504,
+      "code": "GHA"
+    },
+    {
+      "country": "Guinea",
+      "total": 26160,
+      "code": "GIN"
+    },
+    {
+      "country": "Guinea-Bissau",
+      "total": 150,
+      "code": "GNB"
+    },
+    {
+      "country": "Kenya",
+      "total": 626367,
+      "code": "KEN"
+    },
+    {
+      "country": "Lesotho",
+      "total": 47563,
+      "code": "LSO"
+    },
+    {
+      "country": "Liberia",
+      "total": 110889,
+      "code": "LBR"
+    },
+    {
+      "country": "Madagascar",
+      "total": 74360,
+      "code": "MDG"
+    },
+    {
+      "country": "Malawi",
+      "total": 195649,
+      "code": "MWI"
+    },
+    {
+      "country": "Mali",
+      "total": 117215,
+      "code": "MLI"
+    },
+    {
+      "country": "Mauritania",
+      "total": 3084,
+      "code": "MRT"
+    },
+    {
+      "country": "Mauritius",
+      "total": 150,
+      "code": "MUS"
+    },
+    {
+      "country": "Mozambique",
+      "total": 401710,
+      "code": "MOZ"
+    },
+    {
+      "country": "Namibia",
+      "total": 38663,
+      "code": "NAM"
+    },
+    {
+      "country": "Niger",
+      "total": 5500,
+      "code": "NER"
+    },
+    {
+      "country": "Nigeria",
+      "total": 606110,
+      "code": "NGA"
+    },
+    {
+      "country": "Republic of the Congo",
+      "total": 250,
+      "code": "COG"
+    },
+    {
+      "country": "Rwanda",
+      "total": 137680,
+      "code": "RWA"
+    },
+    {
+      "country": "Sao Tome and Principe",
+      "total": 150,
+      "code": "STP"
+    },
+    {
+      "country": "Senegal",
+      "total": 103093,
+      "code": "SEN"
+    },
+    {
+      "country": "Seychelles",
+      "total": 150,
+      "code": "SYC"
+    },
+    {
+      "country": "Sierra Leone",
+      "total": 9461,
+      "code": "SLE"
+    },
+    {
+      "country": "Somalia",
+      "total": 196270,
+      "code": "SOM"
+    },
+    {
+      "country": "South Africa",
+      "total": 268912,
+      "code": "ZAF"
+    },
+    {
+      "country": "South Sudan",
+      "total": 225166,
+      "code": "SSD"
+    },
+    {
+      "country": "Sudan",
+      "total": 9412,
+      "code": "SDN"
+    },
+    {
+      "country": "Swaziland",
+      "total": 43438,
+      "code": "SWZ"
+    },
+    {
+      "country": "Tanzania",
+      "total": 575331,
+      "code": "TZA"
+    },
+    {
+      "country": "The Gambia",
+      "total": 150,
+      "code": "GMB"
+    },
+    {
+      "country": "Togo",
+      "total": 300,
+      "code": "TGO"
+    },
+    {
+      "country": "Uganda",
+      "total": 457955,
+      "code": "UGA"
+    },
+    {
+      "country": "Zambia",
+      "total": 418065,
+      "code": "ZMB"
+    },
+    {
+      "country": "Zimbabwe",
+      "total": 159960,
+      "code": "ZWE"
+    },
+    {
+      "country": "State Africa Regional (AF)",
+      "total": 274308,
+      "code": "ZAF"
+    },
+    {
+      "country": "USAID Central Africa Regional",
+      "total": 26243,
+      "code": "CAF"
+    },
+    {
+      "country": "USAID Southern Africa Regional",
+      "total": 40100,
+      "code": "ZAF"
+    },
+    {
+      "country": "Burma",
+      "total": 114700,
+      "code": "MMR"
+    },
+    {
+      "country": "Cambodia",
+      "total": 78312,
+      "code": "KHM"
+    },
+    {
+      "country": "China",
+      "total": 6800,
+      "code": "CHN"
+    },
+    {
+      "country": "Fiji",
+      "total": 200,
+      "code": "FJI"
+    },
+    {
+      "country": "Indonesia",
+      "total": 179125,
+      "code": "IDN"
+    },
+    {
+      "country": "Laos",
+      "total": 29550,
+      "code": "LAO"
+    },
+    {
+      "country": "Malaysia",
+      "total": 2270,
+      "code": "MYS"
+    },
+    {
+      "country": "Marshall Islands",
+      "total": 500,
+      "code": "MHL"
+    },
+    {
+      "country": "Micronesia",
+      "total": 500,
+      "code": "FSM"
+    },
+    {
+      "country": "Mongolia",
+      "total": 4350,
+      "code": "MNG"
+    },
+    {
+      "country": "Papua New Guinea",
+      "total": 6400,
+      "code": "PNG"
+    },
+    {
+      "country": "Philippines",
+      "total": 188020,
+      "code": "PHL"
+    },
+    {
+      "country": "Samoa",
+      "total": 100,
+      "code": "WSM"
+    },
+    {
+      "country": "Singapore",
+      "total": 200,
+      "code": "SGP"
+    },
+    {
+      "country": "Thailand",
+      "total": 8170,
+      "code": "THA"
+    },
+    {
+      "country": "Timor-Leste",
+      "total": 16900,
+      "code": "TLS"
+    },
+    {
+      "country": "Tonga",
+      "total": 250,
+      "code": "TON"
+    },
+    {
+      "country": "Vietnam",
+      "total": 131912,
+      "code": "VNM"
+    },
+    {
+      "country": "Albania",
+      "total": 14090,
+      "code": "ALB"
+    },
+    {
+      "country": "Armenia",
+      "total": 26412,
+      "code": "ARM"
+    },
+    {
+      "country": "Azerbaijan",
+      "total": 12936,
+      "code": "AZE"
+    },
+    {
+      "country": "Belarus",
+      "total": 9000,
+      "code": "BLR"
+    },
+    {
+      "country": "Bosnia and Herzegovina",
+      "total": 43169,
+      "code": "BIH"
+    },
+    {
+      "country": "Bulgaria",
+      "total": 7000,
+      "code": "BGR"
+    },
+    {
+      "country": "Croatia",
+      "total": 2100,
+      "code": "HRV"
+    },
+    {
+      "country": "Czech Republic",
+      "total": 1800,
+      "code": "CZE"
+    },
+    {
+      "country": "Estonia",
+      "total": 2800,
+      "code": "EST"
+    },
+    {
+      "country": "Georgia",
+      "total": 90325,
+      "code": "GEO"
+    },
+    {
+      "country": "Greece",
+      "total": 200,
+      "code": "GRC"
+    },
+    {
+      "country": "Hungary",
+      "total": 1000,
+      "code": "HUN"
+    },
+    {
+      "country": "Latvia",
+      "total": 2700,
+      "code": "LVA"
+    },
+    {
+      "country": "Lithuania",
+      "total": 2700,
+      "code": "LTU"
+    },
+    {
+      "country": "Macedonia",
+      "total": 13708,
+      "code": "MKD"
+    },
+    {
+      "country": "Malta",
+      "total": 200,
+      "code": "MLT"
+    },
+    {
+      "country": "Moldova",
+      "total": 59131,
+      "code": "MDA"
+    },
+    {
+      "country": "Montenegro",
+      "total": 3795,
+      "code": "MNE"
+    },
+    {
+      "country": "Poland",
+      "total": 8500,
+      "code": "POL"
+    },
+    {
+      "country": "Portugal",
+      "total": 100,
+      "code": "PRT"
+    },
+    {
+      "country": "Romania",
+      "total": 6100,
+      "code": "ROU"
+    },
+    {
+      "country": "Serbia",
+      "total": 23418,
+      "code": "SRB"
+    },
+    {
+      "country": "Slovakia",
+      "total": 900,
+      "code": "SVK"
+    },
+    {
+      "country": "Slovenia",
+      "total": 650,
+      "code": "SVN"
+    },
+    {
+      "country": "Turkey",
+      "total": 3800,
+      "code": "TUR"
+    },
+    {
+      "country": "Ukraine",
+      "total": 294857,
+      "code": "UKR"
+    },
+    {
+      "country": "Algeria",
+      "total": 2300,
+      "code": "DZA"
+    },
+    {
+      "country": "Bahrain",
+      "total": 6600,
+      "code": "BHR"
+    },
+    {
+      "country": "Egypt",
+      "total": 1456800,
+      "code": "EGY"
+    },
+    {
+      "country": "Iraq",
+      "total": 510360,
+      "code": "IRQ"
+    },
+    {
+      "country": "Israel",
+      "total": 3100000,
+      "code": "ISR"
+    },
+    {
+      "country": "Jordan",
+      "total": 1000000,
+      "code": "JOR"
+    },
+    {
+      "country": "Lebanon",
+      "total": 233510,
+      "code": "LBN"
+    },
+    {
+      "country": "Libya",
+      "total": 20500,
+      "code": "LBY"
+    },
+    {
+      "country": "Morocco",
+      "total": 33500,
+      "code": "MAR"
+    },
+    {
+      "country": "Oman",
+      "total": 4000,
+      "code": "OMN"
+    },
+    {
+      "country": "Saudi Arabia",
+      "total": 10,
+      "code": "SAU"
+    },
+    {
+      "country": "Syria",
+      "total": 238470,
+      "code": "SYR"
+    },
+    {
+      "country": "Tunisia",
+      "total": 140400,
+      "code": "TUN"
+    },
+    {
+      "country": "West Bank and Gaza",
+      "total": 363576,
+      "code": "PSE"
+    },
+    {
+      "country": "Yemen",
+      "total": 55884,
+      "code": "YEM"
+    },
+    {
+      "country": "Trans-Sahara Counter-Terrorism Partnership (TSCTP)",
+      "total": 7940,
+      "code": "ESH"
+    },
+    {
+      "country": "Afghanistan",
+      "total": 1249800,
+      "code": "AFG"
+    },
+    {
+      "country": "Bangladesh",
+      "total": 207876,
+      "code": "BGD"
+    },
+    {
+      "country": "India",
+      "total": 75992,
+      "code": "IND"
+    },
+    {
+      "country": "Kazakhstan",
+      "total": 8783,
+      "code": "KAZ"
+    },
+    {
+      "country": "Kyrgyz Republic",
+      "total": 51756,
+      "code": "KGZ"
+    },
+    {
+      "country": "Maldives",
+      "total": 3340,
+      "code": "MDV"
+    },
+    {
+      "country": "Nepal",
+      "total": 109320,
+      "code": "NPL"
+    },
+    {
+      "country": "Pakistan",
+      "total": 742200,
+      "code": "PAK"
+    },
+    {
+      "country": "Sri Lanka",
+      "total": 39797,
+      "code": "LKA"
+    },
+    {
+      "country": "Tajikistan",
+      "total": 41570,
+      "code": "TJK"
+    },
+    {
+      "country": "Turkmenistan",
+      "total": 4815,
+      "code": "TKM"
+    },
+    {
+      "country": "Uzbekistan",
+      "total": 11608,
+      "code": "UZB"
+    },
+    {
+      "country": "Argentina",
+      "total": 550,
+      "code": "ARG"
+    },
+    {
+      "country": "Belize",
+      "total": 1250,
+      "code": "BLZ"
+    },
+    {
+      "country": "Brazil",
+      "total": 1165,
+      "code": "BRA"
+    },
+    {
+      "country": "Chile",
+      "total": 700,
+      "code": "CHL"
+    },
+    {
+      "country": "Colombia",
+      "total": 391253,
+      "code": "COL"
+    },
+    {
+      "country": "Costa Rica",
+      "total": 1825,
+      "code": "CRI"
+    },
+    {
+      "country": "Cuba",
+      "total": 15000,
+      "code": "CUB"
+    },
+    {
+      "country": "Dominican Republic",
+      "total": 22481,
+      "code": "DOM"
+    },
+    {
+      "country": "Ecuador",
+      "total": 2000,
+      "code": "ECU"
+    },
+    {
+      "country": "El Salvador",
+      "total": 87982,
+      "code": "SLV"
+    },
+    {
+      "country": "Guatemala",
+      "total": 145105,
+      "code": "GTM"
+    },
+    {
+      "country": "Guyana",
+      "total": 250,
+      "code": "GUY"
+    },
+    {
+      "country": "Haiti",
+      "total": 218050,
+      "code": "HTI"
+    },
+    {
+      "country": "Honduras",
+      "total": 105655,
+      "code": "HND"
+    },
+    {
+      "country": "Jamaica",
+      "total": 5600,
+      "code": "JAM"
+    },
+    {
+      "country": "Mexico",
+      "total": 134664,
+      "code": "MEX"
+    },
+    {
+      "country": "Nicaragua",
+      "total": 14800,
+      "code": "NIC"
+    },
+    {
+      "country": "Panama",
+      "total": 3200,
+      "code": "PAN"
+    },
+    {
+      "country": "Paraguay",
+      "total": 6261,
+      "code": "PRY"
+    },
+    {
+      "country": "Peru",
+      "total": 81060,
+      "code": "PER"
+    },
+    {
+      "country": "Suriname",
+      "total": 215,
+      "code": "SUR"
+    },
+    {
+      "country": "The Bahamas",
+      "total": 200,
+      "code": "BHS"
+    },
+    {
+      "country": "Trinidad and Tobago",
+      "total": 325,
+      "code": "TTO"
+    },
+    {
+      "country": "Uruguay",
+      "total": 500,
+      "code": "URY"
+    },
+    {
+      "country": "Venezuela",
+      "total": 5500,
+      "code": "VEN"
+    },
+    {
+      "country": "Barbados and Eastern Caribbean",
+      "total": 32874,
+      "code": "BRB"
+    }
+  ]
+}
