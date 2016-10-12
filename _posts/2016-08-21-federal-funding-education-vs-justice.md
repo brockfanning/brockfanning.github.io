@@ -27,6 +27,7 @@ In future posts I will delve into interactive visualizations and also try and na
 For anyone interested in the R code that is converting the Excel spreadsheet into usable json for d3, that code is [here](https://github.com/brockfanning/brockfanning.github.io/blob/master/r/federal-outlays-by-function-and-subfunction.r).
 
 <div id="datavis"></div>
+<script src="http://d3js.org/d3.v4.min.js"></script>
 <script>
 var margin = {top: 20, right: 20, bottom: 30, left: 70},
     width = 740 - margin.left - margin.right,
