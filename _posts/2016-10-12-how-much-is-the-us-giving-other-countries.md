@@ -9,9 +9,12 @@ Here is a statistic I have been curious about: how much money does the US give t
 Dev steps:
 
 * Install rJava and Tabulizer: https://github.com/ropenscilabs/tabulizer
-* Run R code
+* Run R code to generate us-foreign-aid.json file
 * Install ogr2ogr and topojson
 * Get geo data and create map json
+    * Download and unzip geo data: http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/50m/cultural/ne_50m_admin_0_map_units.zip
+    * Run ogr2ogr on the .shp file: `ogr2ogr -f "GeoJSON" subunits.json ne_50m_admin_0_map_units.shp`
+    * Run topojson on that file: `topojson -o world-countries.json --id-property iso_a3 --properties name=name -- subunits.json`
 * Write d3 code
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -39,6 +42,10 @@ function analyze(error, world, aid) {
     var totals = {};
     for (var country in aid[year]) {
         totals[aid[year][country].code] = aid[year][country].total;
+    }
+    var countries = {};
+    for (var country in aid[year]) {
+        countries[aid[year][country].code] = aid[year][country].country;
     }
 
     var subunits = topojson.feature(world, world.objects.subunits);
@@ -68,9 +75,10 @@ function analyze(error, world, aid) {
     }
     for (var countryCode in totals) {
         if (typeof mapCodes[countryCode] === 'undefined') {
-            console.log(countryCode);
+            console.log(countryCode + ": " + countries[countryCode]);
         }
     }
-
+    console.log(mapCodes);
+    console.log(subunits);
 }
 </script>
