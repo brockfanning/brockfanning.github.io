@@ -29,11 +29,23 @@ var svg = d3.select("#datavis").append("svg")
     .attr("width", width)
     .attr("height", height);
 
+var g = svg.append("g");
+
 var tooltip = d3.select("body").append("div")
     .style("position", "absolute")
     .style("padding", "0 10px")
     .style("background", "#CCC")
     .style("opacity", 0);
+
+var projection = d3.geoMercator()
+    .scale(170)
+    .translate([width / 2, height / 2]);
+var path = d3.geoPath().projection(projection);
+
+var zoom = d3.zoom()
+        .scaleExtent([1, 8])
+        .on("zoom", zoomed);
+svg.call(zoom);
 
 d3.queue()
     .defer(d3.json, "/data/geo/world-countries.json")
@@ -50,48 +62,57 @@ function analyze(error, world, aid) {
     for (var country in aid[year]) {
         totals[aid[year][country].code] = aid[year][country].total;
     }
-    var countries = {};
-    for (var country in aid[year]) {
-        countries[aid[year][country].code] = aid[year][country].country;
-    }
 
     var subunits = topojson.feature(world, world.objects.subunits);
-    var projection = d3.geoMercator()
-        .scale(170)
-        .translate([width / 2, height / 2]);
-    var path = d3.geoPath().projection(projection);
     var maxVal = d3.max(aid[year], function(d) { return d.total; });
     var minVal = 0;
-    var scale = d3.scaleLinear()
+    var aidScale = d3.scaleLinear()
         .range(["#EEEEEE", "#000000"])
         .domain([minVal, maxVal]);
 
-    svg.selectAll(".subunit")
+    g.selectAll(".subunit")
         .data(subunits.features)
         .enter().append("path")
         .style("stroke", "#000000")
-        .style("fill", function(d) { if (totals[d.id]) return scale(totals[d.id]); return "#FFFFFF"; })
+        .style("fill", function(d) { return (totals[d.id]) ? aidScale(totals[d.id]) : "#FFFFFF"; })
         .on("mouseover", function(d) {
-            tooltip.transition()
+            var total = "$0";
+            if (typeof totals[d.id] !== 'undefined') {
+                total = numeral(totals[d.id] * 1000).format("($0[.]00a)");
+            }
+            tooltip
+                .html(d.properties.name + ": " + total)
+                .transition()
                 .style("opacity", .9);
-            tooltip.html(d.properties.name + ": " + numeral(totals[d.id] * 1000).format("($ 0.00a)"))
+        })
+        .on("mouseout", function(d) {
+            tooltip
+                .transition()
+                .style("opacity", 0);
+        })
+        .on("mousemove", function(d) {
+            tooltip
                 .style("left", (d3.event.pageX - 10) + "px")
                 .style("top", (d3.event.pageY - 30) + "px");
         })
         .attr("d", path);
 
+    // For development purposes, output the countries that could not be found.
     var mapCodes = {};
     for (var country in subunits.features) {
-
         var id = subunits.features[country].id;
         var name = subunits.features[country].properties.name;
         mapCodes[id] = name;
     }
     for (var countryCode in totals) {
         if (typeof mapCodes[countryCode] === 'undefined') {
-            console.log('Could not find on map: ' + countryCode + " - " + countries[countryCode]);
+            console.log('Could not find on map: ' + countryCode);
         }
     }
-
 }
+
+function zoomed() {
+    var transform = "translate(" + d3.event.transform.x + "," + d3.event.transform.y + ") scale(" + d3.event.transform.k + ")";
+    g.attr("transform", transform);
+};
 </script>
