@@ -20,6 +20,7 @@ Dev steps:
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://d3js.org/topojson.v1.min.js"></script>
 <script src="https://d3js.org/d3-queue.v3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/1.5.3/numeral.min.js"></script>
 <script>
 var width = 740,
     height = 475;
@@ -27,6 +28,12 @@ var width = 740,
 var svg = d3.select("#datavis").append("svg")
     .attr("width", width)
     .attr("height", height);
+
+var tooltip = d3.select("body").append("div")
+    .style("position", "absolute")
+    .style("padding", "0 10px")
+    .style("background", "#CCC")
+    .style("opacity", 0);
 
 d3.queue()
     .defer(d3.json, "/data/geo/world-countries.json")
@@ -64,6 +71,13 @@ function analyze(error, world, aid) {
         .enter().append("path")
         .style("stroke", "#000000")
         .style("fill", function(d) { if (totals[d.id]) return scale(totals[d.id]); return "#FFFFFF"; })
+        .on("mouseover", function(d) {
+            tooltip.transition()
+                .style("opacity", .9);
+            tooltip.html(d.properties.name + ": " + numeral(totals[d.id] * 1000).format("($ 0.00a)"))
+                .style("left", (d3.event.pageX - 10) + "px")
+                .style("top", (d3.event.pageY - 30) + "px");
+        })
         .attr("d", path);
 
     var mapCodes = {};
@@ -75,10 +89,9 @@ function analyze(error, world, aid) {
     }
     for (var countryCode in totals) {
         if (typeof mapCodes[countryCode] === 'undefined') {
-            console.log(countryCode + ": " + countries[countryCode]);
+            console.log('Could not find on map: ' + countryCode + " - " + countries[countryCode]);
         }
     }
-    console.log(mapCodes);
-    console.log(subunits);
+
 }
 </script>
