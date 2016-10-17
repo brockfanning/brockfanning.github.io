@@ -4,7 +4,40 @@ tags: [datavis]
 ---
 Here is a statistic I have been curious about: how much money does the US give to other countries? This was a good chance to stretch my R and D3 chops.
 
-<div id="datavis"></div>
+I was only able to find machine-readable (well, if you can call a table in a PDF "machine-readable") data for a few recent years. The slider below controls which year is being visualized.
+
+<style>
+#controls {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    text-align: center;
+    background: #DDD;
+    width: 100%;
+    padding-top: 10px;
+}
+</style>
+<div id="controls">
+    <input name="year" type="radio" value="2013 actual" id="year-2013" checked>
+    <label for="year-2013">2013</label>
+    <input name="year" type="radio" value="2014 actual" id="year-2014">
+    <label for="year-2014">2014</label>
+    <input name="year" type="radio" value="2015 actual" id="year-2015">
+    <label for="year-2015">2015</label>
+    <input name="year" type="radio" value="2016 request" id="year-2016">
+    <label for="year-2016">2016 *</label>
+    <input name="year" type="radio" value="2017 request" id="year-2017">
+    <label for="year-2017">2017 *</label>
+    <div id="control-text">
+        * The 2016 and 2017 is based on what the US State Department's "request" for each country's funding, but not what was (or will be) actually given.
+    </div>
+</div>
+
+First I went for the obvious visualization, a world map:
+<div id="map"></div><br />
+
+But to better see the rankings between countries, here is a simple bar chart:
+<div id="bars"></div><br />
 
 Dev steps:
 
@@ -21,11 +54,20 @@ Dev steps:
 <script src="https://d3js.org/topojson.v1.min.js"></script>
 <script src="https://d3js.org/d3-queue.v3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/1.5.3/numeral.min.js"></script>
+<style>
+#map svg {
+    background: lightblue;
+}
+#map svg path {
+    vector-effect: non-scaling-stroke;
+}
+</style>
 <script>
+// The world map visualization.
 var width = 740,
     height = 475;
 
-var svg = d3.select("#datavis").append("svg")
+var svg = d3.select("#map").append("svg")
     .attr("width", width)
     .attr("height", height);
 
@@ -47,15 +89,46 @@ var zoom = d3.zoom()
         .on("zoom", zoomed);
 svg.call(zoom);
 
+// Hold our main data out here.
+var world, aid;
+
+// Keep track of which year.
+var year = "2013 actual";
+
+// Behavior for the year switcher.
+d3.selectAll("#controls input[name=year]").on("change", function() {
+    year = this.value;
+    draw();
+});
+
 d3.queue()
     .defer(d3.json, "/data/geo/world-countries.json")
     .defer(d3.json, "/data/us-foreign-aid.json")
     .await(analyze);
 
-function analyze(error, world, aid) {
+function analyze(error, loadedWorld, loadedAid) {
+    world = loadedWorld;
+    aid = loadedAid;
+    draw();
+}
 
-    // For now just look at one year.
-    var year = "2013 actual";
+function draw() {
+    // Fix some countries that don't get ids for some reason.
+    var brokenCountries = {
+        "Fed. of Bos. & Herz.": "BIH",
+        "Gaza": "PSE",
+        "Georgia": "GEO",
+        "Papua New Guinea": "PNG",
+        "Portugal": "PRT",
+        "Serbia": "SRB",
+        "West Bank": "PSE"
+    }
+    for (var index in world.objects.subunits.geometries) {
+        if ("-99" == world.objects.subunits.geometries[index].id) {
+            var name = world.objects.subunits.geometries[index].properties.name;
+            world.objects.subunits.geometries[index].id = brokenCountries[name];
+        }
+    }
 
     // Make a more efficient list of totals.
     var totals = {};
