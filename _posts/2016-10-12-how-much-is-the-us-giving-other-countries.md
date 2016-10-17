@@ -147,17 +147,7 @@ function analyze(error, loadedWorld, loadedAid) {
         mapCodes[id] = name;
     }
 
-    draw();
-}
-
-function draw() {
-
-    var maxVal = d3.max(aid[currentYear], function(d) { return d.total; });
-    var minVal = 0;
-    var aidScale = d3.scaleLinear()
-        .range(["#EEEEEE", "#000000"])
-        .domain([minVal, maxVal]);
-
+    // Do the static parts of the map.
     g.selectAll(".subunit")
         .data(subunits.features)
         .enter().append("path")
@@ -182,13 +172,26 @@ function draw() {
                 .style("top", (d3.event.pageY - 30) + "px");
         })
         .attr("d", path)
-        .transition()
+        .classed("subunit", true)
         .style("stroke", "#000000")
-        .style("fill", function(d) {
+        .style("fill", "#FFFFFF");
+
+    // Now the dynamic stuff.
+    draw();
+}
+
+function draw() {
+
+    var maxVal = d3.max(aid[currentYear], function(d) { return d.total; });
+    var minVal = 0;
+    var aidScale = d3.scaleLinear()
+        .range(["#EEEEEE", "#000000"])
+        .domain([minVal, maxVal]);
+
+    g.selectAll(".subunit")
+        .transition().style("fill", function(d) {
             return (totals[currentYear][d.id]) ? aidScale(totals[currentYear][d.id]) : "#FFFFFF";
         });
-
-
 
     // For development purposes, output the countries that could not be found.
     for (var countryCode in totals[currentYear]) {
