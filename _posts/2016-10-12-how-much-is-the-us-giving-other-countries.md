@@ -89,15 +89,15 @@ var zoom = d3.zoom()
         .on("zoom", zoomed);
 svg.call(zoom);
 
-// Hold our main data out here.
-var world, aid;
+// Hold some one-time data out here.
+var world, aid, totals, mapCodes, subunits;
 
 // Keep track of which year.
-var year = "2013 actual";
+var currentYear = "2013 actual";
 
 // Behavior for the year switcher.
 d3.selectAll("#controls input[name=year]").on("change", function() {
-    year = this.value;
+    currentYear = this.value;
     draw();
 });
 
@@ -109,10 +109,7 @@ d3.queue()
 function analyze(error, loadedWorld, loadedAid) {
     world = loadedWorld;
     aid = loadedAid;
-    draw();
-}
 
-function draw() {
     // Fix some countries that don't get ids for some reason.
     var brokenCountries = {
         "Fed. of Bos. & Herz.": "BIH",
@@ -130,14 +127,32 @@ function draw() {
         }
     }
 
+    // Convert the geo data.
+    subunits = topojson.feature(world, world.objects.subunits);
+
     // Make a more efficient list of totals.
-    var totals = {};
-    for (var country in aid[year]) {
-        totals[aid[year][country].code] = aid[year][country].total;
+    totals = {};
+    for (var year in aid) {
+        totals[year] = {};
+        for (var country in aid[year]) {
+            totals[year][aid[year][country].code] = aid[year][country].total;
+        }
     }
 
-    var subunits = topojson.feature(world, world.objects.subunits);
-    var maxVal = d3.max(aid[year], function(d) { return d.total; });
+    // Make an efficient list of mapCodes.
+    mapCodes = {};
+    for (var country in subunits.features) {
+        var id = subunits.features[country].id;
+        var name = subunits.features[country].properties.name;
+        mapCodes[id] = name;
+    }
+
+    draw();
+}
+
+function draw() {
+
+    var maxVal = d3.max(aid[currentYear], function(d) { return d.total; });
     var minVal = 0;
     var aidScale = d3.scaleLinear()
         .range(["#EEEEEE", "#000000"])
@@ -146,12 +161,10 @@ function draw() {
     g.selectAll(".subunit")
         .data(subunits.features)
         .enter().append("path")
-        .style("stroke", "#000000")
-        .style("fill", function(d) { return (totals[d.id]) ? aidScale(totals[d.id]) : "#FFFFFF"; })
         .on("mouseover", function(d) {
             var total = "$0";
-            if (typeof totals[d.id] !== 'undefined') {
-                total = numeral(totals[d.id] * 1000).format("($0[.]00a)");
+            if (typeof totals[currentYear][d.id] !== 'undefined') {
+                total = numeral(totals[currentYear][d.id] * 1000).format("($0[.]00a)");
             }
             tooltip
                 .html(d.properties.name + ": " + total)
@@ -168,16 +181,17 @@ function draw() {
                 .style("left", (d3.event.pageX - 10) + "px")
                 .style("top", (d3.event.pageY - 30) + "px");
         })
-        .attr("d", path);
+        .attr("d", path)
+        .transition()
+        .style("stroke", "#000000")
+        .style("fill", function(d) {
+            return (totals[currentYear][d.id]) ? aidScale(totals[currentYear][d.id]) : "#FFFFFF";
+        });
+
+
 
     // For development purposes, output the countries that could not be found.
-    var mapCodes = {};
-    for (var country in subunits.features) {
-        var id = subunits.features[country].id;
-        var name = subunits.features[country].properties.name;
-        mapCodes[id] = name;
-    }
-    for (var countryCode in totals) {
+    for (var countryCode in totals[currentYear]) {
         if (typeof mapCodes[countryCode] === 'undefined') {
             console.log('Could not find on map: ' + countryCode);
         }
