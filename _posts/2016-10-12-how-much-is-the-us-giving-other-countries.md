@@ -1,5 +1,5 @@
 ---
-title: How Much Money is the US giving other countries?
+title: How much money is the US giving other countries?
 tags: [datavis]
 ---
 Here is a statistic I have been curious about: how much money does the US give to other countries? This was a good chance to stretch my R and D3 chops.
@@ -96,7 +96,7 @@ var zoom = d3.zoom()
         .on("zoom", zoomed);
 svg.call(zoom);
 
-// Now build the bar graph.
+// Now set up the bar graph.
 var bHeight = 400;
 var bWidth = 740;
 var barWidth = 50;
@@ -110,7 +110,7 @@ var bsvg = d3.select('#bars').append('svg')
 // Hold some one-time data out here.
 var world, aid, countries, countriesAlphabetic, highValue = 0;
 
-// Keep track of which year.
+// Keep track of which year is being displayed.
 var currentYear = "2013 actual";
 
 // Behavior for the year switcher.
@@ -120,11 +120,13 @@ d3.selectAll("#controls input[name=year]").on("change", function() {
     drawBars();
 });
 
+// Since we have to load 2 separate json files, use d3.queue.
 d3.queue()
     .defer(d3.json, "/data/geo/world-countries.json")
     .defer(d3.json, "/data/us-foreign-aid.json")
     .await(analyze);
 
+// This function is executed one time after all the data is loaded.
 function analyze(error, loadedWorld, loadedAid) {
     world = loadedWorld;
     aid = loadedAid;
@@ -182,6 +184,7 @@ function analyze(error, loadedWorld, loadedAid) {
         }
         countries.push(country);
     }
+
     // For the bar graph, we'll want to alphabetize the countries.
     countries = countries.sort(function(a, b) {
         if (a.properties.name < b.properties.name) {
@@ -195,9 +198,7 @@ function analyze(error, loadedWorld, loadedAid) {
 
     // Do the static parts of the map.
     g.selectAll(".country")
-        .data(countries, function(d) {
-            return d.id;
-        })
+        .data(countries)
         .enter().append("path")
         .on("mouseover", tooltipMouseOver)
         .on("mouseout", tooltipMouseOut)
@@ -220,9 +221,7 @@ function analyze(error, loadedWorld, loadedAid) {
 
     // Draw the countries on the bar graph is dimensionless white bars.
     bsvg.selectAll('.country')
-        .data(countries, function(d) {
-            return d.id;
-        })
+        .data(countries)
         .enter()
         .append('rect')
         .classed('country', true)
@@ -238,6 +237,7 @@ function analyze(error, loadedWorld, loadedAid) {
     drawBars();
 }
 
+// This redraws the already-initialized map based on the current year.
 function drawMap() {
 
     var mapColors = d3.scaleLinear()
@@ -250,28 +250,30 @@ function drawMap() {
         });
 }
 
+// This redraws the already-initialized bar graph based on the current year.
 function drawBars() {
 
     // Tweak this threshold to make the bar graph manageable. We don't want to
     // show EVERY country, because it makes the bars too skinny.
     var threshold = 20000;
-    bsvg.selectAll('.country').classed('worth-showing', function(d) {
+
+    // Query the countries that clear that threshold.
+    var worthShowing = bsvg.selectAll('.country').filter(function(d) {
         return (d.years[currentYear] >= threshold);
     });
-    var worthShowing = bsvg.selectAll('.worth-showing');
-    var notWorthShowing = bsvg.selectAll('.country:not(.worth-showing)');
+
+    // D3 scales.
     var barScaleX = d3.scaleBand()
         .domain(d3.range(0, worthShowing.size()))
         .range([0, bWidth]);
-
     var barScaleY = d3.scaleLinear()
         .domain([0, highValue])
         .range([0, bHeight]);
-
     var barColors = d3.scaleLinear()
         .domain([0, highValue])
         .range(['#FFB832', '#C61C6F']);
 
+    // Update the dimensions/locations of the bars.
     worthShowing.transition()
         .style('fill', function (d) {
             return barColors(d.years[currentYear]);
@@ -286,28 +288,27 @@ function drawBars() {
         .attr('y', function (d) {
             return bHeight - barScaleY(d.years[currentYear]);
         });
-    notWorthShowing.transition()
-        .attr('width', 0)
-        .attr('height', 0)
-        .attr('x', 0)
-        .attr('y', 0);
 }
 
+// Callback for zooming the map.
 function zoomed() {
     var transform = "translate(" + d3.event.transform.x + "," + d3.event.transform.y + ") scale(" + d3.event.transform.k + ")";
     g.attr("transform", transform);
 };
 
+// Callback for mousing over a country or bar.
 function tooltipMouseOver(d) {
     var total = numeral(d.years[currentYear] * 1000).format("($0[.]00a)");
     tooltip.html(d.properties.name + ": " + total);
     tooltip.transition().style("opacity", .9);
 }
 
+// Callback for mousing out of a country or bar.
 function tooltipMouseOut() {
     tooltip.transition().style("opacity", 0);
 }
 
+// Callback for moving the mouse in a country or bar.
 function tooltipMouseMove() {
     tooltip.style("left", (d3.event.pageX - 10) + "px");
     tooltip.style("top", (d3.event.pageY - 30) + "px");
