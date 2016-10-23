@@ -249,7 +249,7 @@ function analyze(error, loadedWorld, loadedAid) {
     g.selectAll(".country")
         .data(countries)
         .enter().append("path")
-        .attr('touch-action', 'none')
+        .attr('touch-action', 'auto')
         .on('pointerdown', tooltipClick)
         .attr("d", path)
         .classed("country", true)
