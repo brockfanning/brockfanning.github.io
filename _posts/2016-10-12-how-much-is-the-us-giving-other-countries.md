@@ -106,6 +106,11 @@ A few notes about the development steps, so I can refer to this later:
 #map svg {
     background: lightblue;
 }
+#map {
+    margin: 0 auto;
+    max-width: 90%;
+    overflow: hidden;
+}
 #map svg path {
     vector-effect: non-scaling-stroke;
 }
@@ -131,13 +136,9 @@ var projection = d3.geoMercator()
 var path = d3.geoPath().projection(projection);
 
 var zoom = d3.zoom()
-        .scaleExtent([1, 8])
-        .on("zoom", zoomed);
-// Apply zoom behavior to the svg, except for the mouse wheel. (We really just
-// want dragging.)
-svg
-    .call(zoom)
-    .on("wheel.zoom", null);
+    .scaleExtent([1, 8])
+    .on("zoom", zoomed);
+svg.call(zoom);
 
 // Now set up the bar graph.
 var bHeight = 400;
