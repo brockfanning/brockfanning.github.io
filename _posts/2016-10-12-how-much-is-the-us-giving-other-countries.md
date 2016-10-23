@@ -16,11 +16,23 @@ I was only able to find machine-readable (well, if you can call a table in a PDF
     width: 80%;
     padding: 10px 10%;
     box-shadow: 0 -5px 5px rgba(0, 0, 0, .5);
+    font-size: 3em;
 }
-#control-text {
-    border-top: 1px solid black;
-    padding-top: 10px;
-    margin-top: 10px;
+#tooltip {
+    background: white;
+    position: absolute;
+    pointer-events: none;
+    padding: 5px;
+    border-radius: 5px;
+    filter: drop-shadow(rgba(0, 0, 0, 0.3) 0 2px 10px);
+}
+#tooltip:after {
+    border: 10px solid;
+    border-color: white transparent transparent;
+    content: "";
+    left: 0px;
+    position: absolute;
+    top: 95%;
 }
 </style>
 <div id="controls">
@@ -30,13 +42,6 @@ I was only able to find machine-readable (well, if you can call a table in a PDF
     <label for="year-2014">2014</label>
     <input name="year" type="radio" value="2015 actual" id="year-2015">
     <label for="year-2015">2015</label>
-    <input name="year" type="radio" value="2016 request" id="year-2016">
-    <label for="year-2016">2016 *</label>
-    <input name="year" type="radio" value="2017 request" id="year-2017">
-    <label for="year-2017">2017 *</label>
-    <div id="control-text">
-        * The 2016 and 2017 data is based on the State Department's "request" for each country's funding, but not what was (or will be) actually given.
-    </div>
 </div>
 
 First I went for the obvious visualization, a world map:
@@ -45,6 +50,26 @@ First I went for the obvious visualization, a world map:
 But to better see the rankings between countries, here is a simple bar chart:
 <div id="bars"></div><br />
 (In the bar graph above, countries getting less than $20m are not shown, to keep the bars from getting too thin.)
+
+<!--
+
+The obvious question for any particular country and amount of funding: Why? Why do we give Country X 200 times more than Country Y? The answer to that question, of course, is probably unique and nuanced for each country. But, since we have the power of data visualization at our disposal, let's just see if there might be any correlations to known statistics.
+
+For each of the metrics below, I am asking these questions:
+
+1. For each country the US gives money to, what is the ratio between funding given, and the [insert metric here]?
+2. What is the average of these ratios across all countries?
+3. For each country the US gives money to, how does the ratio from question #1 deviate from the ratio (average) from question #2? And, in which direction?
+
+Funding vs GDP (gross domestic product)
+
+Funding vs area
+
+Funding vs population
+
+Funding vs population density
+
+-->
 
 ### Dev notes
 
@@ -63,6 +88,14 @@ A few notes about the development steps, so I can refer to this later:
 
 * [R code](https://github.com/brockfanning/brockfanning.github.io/blob/master/r/us-foreign-aid.r)
 * [d3 code](https://github.com/brockfanning/brockfanning.github.io/blob/master/_posts/2016-10-12-how-much-is-the-us-giving-other-countries.md)
+
+### Source of data
+
+* 2013 actual: pages 15-21 of [this pdf](http://www.state.gov/documents/organization/224071.pdf)
+* 2014 actual: pages 14-19 of [this pdf](http://www.state.gov/documents/organization/238223.pdf)
+* 2015 actual: pages 14-18 of [this pdf](http://www.state.gov/documents/organization/252735.pdf)
+* 2016 request: pages 20-25 of [this pdf](http://www.state.gov/documents/organization/238223.pdf)
+* 2017 request: pages 19-24 of [this pdf](http://www.state.gov/documents/organization/252735.pdf)
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://d3js.org/topojson.v1.min.js"></script>
@@ -88,9 +121,7 @@ var svg = d3.select("#map").append("svg")
 var g = svg.append("g");
 
 var tooltip = d3.select("body").append("div")
-    .style("position", "absolute")
-    .style("padding", "0 10px")
-    .style("background", "#CCC")
+    .attr('id', 'tooltip')
     .style("opacity", 0);
 
 var projection = d3.geoMercator()
@@ -115,7 +146,7 @@ var bsvg = d3.select('#bars').append('svg')
     .style('background', '#C9D7D6');
 
 // Hold some one-time data out here.
-var world, aid, countries, countriesAlphabetic, highValue = 0;
+var world, aid, countries, countriesAlphabetic, highValue = 0, colorScale;
 
 // Keep track of which year is being displayed.
 var currentYear = "2013 actual";
@@ -123,8 +154,8 @@ var currentYear = "2013 actual";
 // Behavior for the year switcher.
 d3.selectAll("#controls input[name=year]").on("change", function() {
     currentYear = this.value;
-    drawMap();
-    drawBars();
+    updateMap();
+    updateBarGraph();
 });
 
 // Since we have to load 2 separate json files, use d3.queue.
@@ -203,20 +234,8 @@ function analyze(error, loadedWorld, loadedAid) {
         return 0;
     });
 
-    // Do the static parts of the map.
-    g.selectAll(".country")
-        .data(countries)
-        .enter().append("path")
-        .on("mouseover", tooltipMouseOver)
-        .on("mouseout", tooltipMouseOut)
-        .on("mousemove", tooltipMouseMove)
-        .attr("d", path)
-        .classed("country", true)
-        .style("stroke", "#000000")
-        .style("fill", "#FFFFFF");
-
     // We also need the highest value across all years and all the countries,
-    // to properly scale the bar graph.
+    // to properly scale colors and other attributes.
     for (var country in countries) {
         for (var year in countries[country].years) {
             var thisValue = countries[country].years[year];
@@ -225,6 +244,20 @@ function analyze(error, loadedWorld, loadedAid) {
             }
         }
     }
+
+    colorScale = d3.scaleLinear()
+        .domain([0, highValue])
+        .range(['#FFFFFF', 'darkgreen']);
+
+    // Do the static parts of the map.
+    g.selectAll(".country")
+        .data(countries)
+        .enter().append("path")
+        .on('click', tooltipClick)
+        .attr("d", path)
+        .classed("country", true)
+        .style("stroke", "#000000")
+        .style("fill", "#FFFFFF");
 
     // Draw the countries on the bar graph is dimensionless white bars.
     bsvg.selectAll('.country')
@@ -235,30 +268,27 @@ function analyze(error, loadedWorld, loadedAid) {
         .style('fill', '#FFFFFF')
         .attr('width', 0)
         .attr('height', 0)
-        .on("mouseover", tooltipMouseOver)
-        .on("mouseout", tooltipMouseOut)
-        .on("mousemove", tooltipMouseMove);
+        .on('click', tooltipClick);
 
     // Now the dynamic stuff.
-    drawMap();
-    drawBars();
+    updateMap();
+    updateBarGraph();
 }
 
 // This redraws the already-initialized map based on the current year.
-function drawMap() {
-
-    var mapColors = d3.scaleLinear()
-        .range(["#EEEEEE", "#000000"])
-        .domain([0, highValue]);
+function updateMap() {
 
     g.selectAll(".country")
         .transition().style("fill", function(d) {
-            return (d.years[currentYear]) ? mapColors(d.years[currentYear]) : "#FFFFFF";
+            if (d.years[currentYear] == 0) {
+                return '#CCCCCC';
+            }
+            return colorScale(d.years[currentYear]);
         });
 }
 
 // This redraws the already-initialized bar graph based on the current year.
-function drawBars() {
+function updateBarGraph() {
 
     // Tweak this threshold to make the bar graph manageable. We don't want to
     // show EVERY country, because it makes the bars too skinny.
@@ -276,14 +306,11 @@ function drawBars() {
     var barScaleY = d3.scaleLinear()
         .domain([0, highValue])
         .range([0, bHeight]);
-    var barColors = d3.scaleLinear()
-        .domain([0, highValue])
-        .range(['#FFB832', '#C61C6F']);
 
     // Update the dimensions/locations of the bars.
     worthShowing.transition()
         .style('fill', function (d) {
-            return barColors(d.years[currentYear]);
+            return colorScale(d.years[currentYear]);
         })
         .attr('width', barScaleX.bandwidth())
         .attr('height', function(d) {
@@ -303,21 +330,13 @@ function zoomed() {
     g.attr("transform", transform);
 };
 
-// Callback for mousing over a country or bar.
-function tooltipMouseOver(d) {
+// Callback for clicking a country or bar.
+function tooltipClick(d) {
     var total = numeral(d.years[currentYear] * 1000).format("($0[.]00a)");
+    tooltip.style("opacity", 0);
     tooltip.html(d.properties.name + ": " + total);
-    tooltip.transition().style("opacity", .9);
-}
-
-// Callback for mousing out of a country or bar.
-function tooltipMouseOut() {
-    tooltip.transition().style("opacity", 0);
-}
-
-// Callback for moving the mouse in a country or bar.
-function tooltipMouseMove() {
     tooltip.style("left", (d3.event.pageX - 10) + "px");
-    tooltip.style("top", (d3.event.pageY - 30) + "px");
+    tooltip.style("top", (d3.event.pageY - 50) + "px");
+    tooltip.transition().style("opacity", 1);
 }
 </script>
