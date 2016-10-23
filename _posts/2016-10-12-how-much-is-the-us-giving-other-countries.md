@@ -6,6 +6,7 @@ Here is a statistic I have been curious about: how much money does the US give t
 
 I was only able to find machine-readable (well, if you can call a table in a PDF "machine-readable") data for a few recent years. The radio buttons below control which year is being visualized.
 
+<script src="https://code.jquery.com/pep/0.4.1/pep.js"></script>
 <style>
 #controls {
     position: fixed;
@@ -125,7 +126,7 @@ var tooltip = d3.select("body").append("div")
     .style("opacity", 0);
 
 var projection = d3.geoMercator()
-    .scale(170)
+    .scale(140)
     .translate([width / 2, height / 2]);
 var path = d3.geoPath().projection(projection);
 
@@ -248,7 +249,7 @@ function analyze(error, loadedWorld, loadedAid) {
     g.selectAll(".country")
         .data(countries)
         .enter().append("path")
-        .on('click', tooltipClick)
+        .on('pointerdown', tooltipClick)
         .attr("d", path)
         .classed("country", true)
         .style("stroke", "#000000")
@@ -263,7 +264,7 @@ function analyze(error, loadedWorld, loadedAid) {
         .style('fill', '#FFFFFF')
         .attr('width', 0)
         .attr('height', 0)
-        .on('click', tooltipClick);
+        .on('pointerdown', tooltipClick);
 
     // Now the dynamic stuff.
     updateMap();
