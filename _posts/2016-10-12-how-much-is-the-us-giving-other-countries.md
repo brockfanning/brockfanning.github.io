@@ -44,6 +44,7 @@ First I went for the obvious visualization, a world map:
 
 But to better see the rankings between countries, here is a simple bar chart:
 <div id="bars"></div><br />
+(In the bar graph above, countries getting less than $20m are not shown, to keep the bars from getting too thin.)
 
 Dev steps:
 
@@ -183,12 +184,20 @@ function analyze(error, loadedWorld, loadedAid) {
     }
     // For the bar graph, we'll want to alphabetize the countries.
     countries = countries.sort(function(a, b) {
-        return a.properties.name > b.properties.name;
+        if (a.properties.name < b.properties.name) {
+            return -1;
+        }
+        if (a.properties.name > b.properties.name) {
+            return 1;
+        }
+        return 0;
     });
 
     // Do the static parts of the map.
     g.selectAll(".country")
-        .data(countries)
+        .data(countries, function(d) {
+            return d.id;
+        })
         .enter().append("path")
         .on("mouseover", tooltipMouseOver)
         .on("mouseout", tooltipMouseOut)
@@ -211,7 +220,9 @@ function analyze(error, loadedWorld, loadedAid) {
 
     // Draw the countries on the bar graph is dimensionless white bars.
     bsvg.selectAll('.country')
-        .data(countries)
+        .data(countries, function(d) {
+            return d.id;
+        })
         .enter()
         .append('rect')
         .classed('country', true)
@@ -234,7 +245,6 @@ function drawMap() {
         .domain([0, highValue]);
 
     g.selectAll(".country")
-        .data(countries)
         .transition().style("fill", function(d) {
             return (d.years[currentYear]) ? mapColors(d.years[currentYear]) : "#FFFFFF";
         });
@@ -244,10 +254,14 @@ function drawBars() {
 
     // Tweak this threshold to make the bar graph manageable. We don't want to
     // show EVERY country, because it makes the bars too skinny.
-    var threshold = 10;
-
+    var threshold = 20000;
+    bsvg.selectAll('.country').classed('worth-showing', function(d) {
+        return (d.years[currentYear] >= threshold);
+    });
+    var worthShowing = bsvg.selectAll('.worth-showing');
+    var notWorthShowing = bsvg.selectAll('.country:not(.worth-showing)');
     var barScaleX = d3.scaleBand()
-        .domain(d3.range(0, countries.length))
+        .domain(d3.range(0, worthShowing.size()))
         .range([0, bWidth]);
 
     var barScaleY = d3.scaleLinear()
@@ -258,9 +272,7 @@ function drawBars() {
         .domain([0, highValue])
         .range(['#FFB832', '#C61C6F']);
 
-    bsvg.selectAll('.country')
-        .data(countries)
-        .transition()
+    worthShowing.transition()
         .style('fill', function (d) {
             return barColors(d.years[currentYear]);
         })
@@ -274,6 +286,11 @@ function drawBars() {
         .attr('y', function (d) {
             return bHeight - barScaleY(d.years[currentYear]);
         });
+    notWorthShowing.transition()
+        .attr('width', 0)
+        .attr('height', 0)
+        .attr('x', 0)
+        .attr('y', 0);
 }
 
 function zoomed() {
@@ -282,10 +299,7 @@ function zoomed() {
 };
 
 function tooltipMouseOver(d) {
-    var total = "$0";
-    if (typeof d.years[currentYear] !== 'undefined') {
-        total = numeral(d.years[currentYear] * 1000).format("($0[.]00a)");
-    }
+    var total = numeral(d.years[currentYear] * 1000).format("($0[.]00a)");
     tooltip.html(d.properties.name + ": " + total);
     tooltip.transition().style("opacity", .9);
 }
