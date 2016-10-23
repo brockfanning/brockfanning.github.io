@@ -132,7 +132,11 @@ var path = d3.geoPath().projection(projection);
 var zoom = d3.zoom()
         .scaleExtent([1, 8])
         .on("zoom", zoomed);
-svg.call(zoom);
+// Apply zoom behavior to the svg, except for the mouse wheel. (We really just
+// want dragging.)
+svg
+    .call(zoom)
+    .on("wheel.zoom", null);
 
 // Now set up the bar graph.
 var bHeight = 400;
