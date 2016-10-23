@@ -6,9 +6,9 @@ Here is a statistic I have been curious about: how much money does the US give t
 
 I was only able to find machine-readable (well, if you can call a table in a PDF "machine-readable") data for a few recent years. The radio buttons below control which year is being visualized.
 
-<script src="https://code.jquery.com/pep/0.4.1/pep.js"></script>
 <style>
 #controls {
+    display: none;
     position: fixed;
     bottom: 0px;
     left: 0px;
@@ -259,8 +259,7 @@ function analyze(error, loadedWorld, loadedAid) {
     g.selectAll(".country")
         .data(countries)
         .enter().append("path")
-        .attr('touch-action', 'auto')
-        .on('pointerdown', tooltipClick)
+        .on('click', tooltipClick)
         .attr("d", path)
         .classed("country", true)
         .style("stroke", "#000000")
@@ -275,7 +274,7 @@ function analyze(error, loadedWorld, loadedAid) {
         .style('fill', '#FFFFFF')
         .attr('width', 0)
         .attr('height', 0)
-        .on('pointerdown', tooltipClick);
+        .on('click', tooltipClick);
 
     // Now the dynamic stuff.
     updateMap();
