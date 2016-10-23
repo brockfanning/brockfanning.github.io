@@ -130,6 +130,15 @@ var projection = d3.geoMercator()
     .translate([width / 2, height / 2]);
 var path = d3.geoPath().projection(projection);
 
+var zoom = d3.zoom()
+        .scaleExtent([1, 8])
+        .on("zoom", zoomed);
+// Apply zoom behavior to the svg, except for the mouse wheel. (We really just
+// want dragging.)
+svg
+    .call(zoom)
+    .on("wheel.zoom", null);
+
 // Now set up the bar graph.
 var bHeight = 400;
 var bWidth = 740;
@@ -320,6 +329,12 @@ function updateBarGraph() {
             return bHeight - barScaleY(d.years[currentYear]);
         });
 }
+
+// Callback for zooming the map.
+function zoomed() {
+    var transform = "translate(" + d3.event.transform.x + "," + d3.event.transform.y + ") scale(" + d3.event.transform.k + ")";
+    g.attr("transform", transform);
+};
 
 // Callback for clicking a country or bar.
 function tooltipClick(d) {
