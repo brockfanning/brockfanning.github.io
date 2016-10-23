@@ -46,7 +46,9 @@ But to better see the rankings between countries, here is a simple bar chart:
 <div id="bars"></div><br />
 (In the bar graph above, countries getting less than $20m are not shown, to keep the bars from getting too thin.)
 
-Dev steps:
+### Dev notes
+
+A few notes about the development steps, so I can refer to this later:
 
 * Install rJava and Tabulizer: https://github.com/ropenscilabs/tabulizer
 * Run R code to generate us-foreign-aid.json file
@@ -56,6 +58,11 @@ Dev steps:
     * Run ogr2ogr on the .shp file: `ogr2ogr -f "GeoJSON" subunits.json ne_50m_admin_0_map_units.shp`
     * Run topojson on that file: `topojson -o world-countries.json --id-property iso_a3 --properties name=name -- subunits.json`
 * Write d3 code
+
+### Source code
+
+* [R code](https://github.com/brockfanning/brockfanning.github.io/blob/master/r/us-foreign-aid.r)
+* [d3 code](https://github.com/brockfanning/brockfanning.github.io/blob/master/_posts/2016-10-12-how-much-is-the-us-giving-other-countries.md)
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://d3js.org/topojson.v1.min.js"></script>
