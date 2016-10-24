@@ -7,6 +7,10 @@ Here is a statistic I have been curious about: how much money does the US give t
 I was only able to find machine-readable (well, if you can call a table in a PDF "machine-readable") data for a few recent years. The radio buttons below control which year is being visualized.
 
 <style>
+.country {
+    touch-action: manipulation;
+    -ms-touch-action: manipulation;
+}
 #controls {
     display: none;
     position: fixed;
